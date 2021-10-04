@@ -1,0 +1,131 @@
+<script>
+    console.log("Hola mundo");
+
+    alert("Joaquim Gallifa");
+
+    var a="Joaquim";
+    var b="Gallifa";
+
+    console.log(a + " " + b);
+
+    var c=3;
+    var d=7;
+
+    console.log(c+d);
+
+    nota_examen = prompt("quina nota has tret?");
+
+    while (nota_examen<0 || nota_examen>10 ){
+        console.log("Em volies pillar, eh? Escriu una nota entre 0 i 10");
+        nota_examen = prompt("Em volies pillar, eh? Escriu una nota entre 0 i 10");
+    }
+
+    if (nota_examen<5){
+        alert("Ohh has suspès l'examen amb "+ nota_examen);
+    }
+    else {
+        alert("Felicitats, has aprovat " + nota_examen );
+    }
+
+    text2="Tinc un cotxe de color blau";
+    console.log("Canviem la paraula blau per verd fel següent text");
+    console.log(text2);
+
+    var paraules=text2.split(" ");
+
+    frase2=" ";
+    for(i=0; i<paraules.length; i++){
+        if(paraules[i]!="blau"){
+            paraules[i]=paraules[i];
+        }
+        else{
+            paraules[i]="verd";
+        }
+        frase2 = frase2 + " " + paraules[i];
+    }
+    console.log(frase2);
+
+    text="Tinc un cotxe de color blau";
+    console.log("I ara canviem les lletres o per u  de la frase anterior");
+
+    letras = Array.from(text);
+
+    console.log(letras);
+
+    frase = "";
+    for(var i=0; i<letras.length; i++){
+        
+        if(letras[i]!="o"){
+            letras[i]=letras[i];
+        }
+        else{
+            letras[i]="u";
+        }
+        frase = frase + letras[i];
+    }
+    console.log(frase);
+
+   
+
+    var llistat = Array("taula", "cadira", "ordinador" , "llibreta" );
+
+    for(i=0; i<llistat.length; i++){
+        console.log("L'objecte " + llistat[i] + " està a la posició " + i);
+    }
+
+    //vamos hacer la calculadora
+</script>
+<script>
+
+    alert("Anem a veure que tal funciona la caluculadora NIVELL 2")
+
+       
+
+    function calculadora (operador, num1, num2){
+
+         if (operador=="+"){
+             alert("El resultat és: " + (num1+num2));
+         }
+         else if (operador =="-"){
+             alert("El resultat és: " + (num1-num2));
+         }
+         else if(operador == "*"){
+             alert("El resultat és: " + (num1*num2));
+         }
+         else{
+             if(num2!=0){
+                 alert("El resultat és: " + (num1/num2));
+             }
+             else{
+                 alert("No es pot dividir per Zero");
+             }
+            
+         }
+     } 
+
+   
+
+     var repetir = "si";
+
+     do{
+         
+         operaciones=prompt("Introdueix un operador. Escriu + , - , * , / ");
+         while (operaciones!="+" && operaciones!="-" && operaciones!="*" && operaciones!="/"){
+             operaciones=prompt("Operador no vàlid. Introdueix un operador. Escriu + , - , * ");
+         }
+         operador1 = parseInt(prompt("Introdueix el primer número"));
+         operador2 = parseInt(prompt("Introdueix el segun número"));
+
+     
+        
+         calculadora(operaciones, operador1, operador2);
+
+         repetir = prompt("Otra operación si/no");
+
+     }while(repetir=="si");
+
+
+
+
+ </script>
+    
